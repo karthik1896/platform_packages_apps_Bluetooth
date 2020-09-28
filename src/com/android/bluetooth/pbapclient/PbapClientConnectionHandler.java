@@ -419,12 +419,12 @@ class PbapClientConnectionHandler extends Handler {
                                 numberOfContactsToDownload, startOffset);
                 request.execute(mObexSession);
                 ArrayList<VCardEntry> vcards = request.getList();
-                if (path == FAV_PATH) {
+                //if (path == FAV_PATH) {
                     // mark each vcard as a favorite
-                    for (VCardEntry v : vcards) {
-                        v.setStarred(true);
-                    }
-                }
+                   // for (VCardEntry v : vcards) {
+                        //v.setStarred(true);
+                    //}
+                //}
                 processor.setResults(vcards);
                 processor.onPullComplete();
 
